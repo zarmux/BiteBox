@@ -1,0 +1,313 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background makes food photos explode with color */
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(18, 18, 18, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffb703; /* Warm appetite-stimulating amber gold */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffb703;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    /* High-quality background image of steaming gourmet food */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: #ffb703;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin: 15px 0 25px 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 35px;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #d9381e; /* Rich Crimson red to spark hunger cues */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #b82d14;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 10px 20px;
+    border: 2px solid #ffb703;
+    color: #ffb703 !important;
+    border-radius: 4px;
+    transition: all 0.3s ease !important;
+}
+
+.btn-small:hover {
+    background-color: #ffb703;
+    color: #121212 !important;
+}
+
+/* --- Menu Section --- */
+.menu-section {
+    padding: 100px 8%;
+    background-color: #1a1a1a;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: #888888;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Menu Cards --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.menu-card {
+    background-color: #121212;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+    .card-img {
+    width: 100%;           /* Forces the image box to fill the card's width */
+    height: 250px;         /* Forces every single dish image box to be EXACTLY 250px tall */
+    background-size: cover; /* Auto-crops and scales the image so it fills the box without stretching */
+    background-position: center; /* Centers the focus of the photo so the best part isn't cut off */
+    transition: transform 0.5s ease;
+}
+
+.menu-card:hover .card-img {
+    transform: scale(1.05); /* Subtle zoom on hover to make food look inviting */
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.price {
+    color: #ffb703;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.card-info p {
+    font-size: 0.95rem;
+    color: #aaaaaa;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #121212;
+    padding: 40px 8%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+    .nav-links {
+        display: none; /* In a full setup you'd add a burger menu here */
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .menu-section {
+        padding: 60px 5%;
+    }
+}
+
+
+/* --- Our Story Page Specific Styles --- */
+
+/* Hero Banner for Story Page */
+.story-hero {
+    height: 45vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* Active Page Highlight */
+.nav-links a.active {
+    color: #ffb703;
+}
+
+/* Main Story Layout Container */
+.story-content-section {
+    padding: 80px 8%;
+    background-color: #1a1a1a;
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #ffb703;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.story-text p {
+    font-size: 1.05rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.story-image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive adjust for mobile phones */
+@media (max-width: 900px) {
+    .story-container {
+        grid-template-columns: 1fr; /* Stack layout vertically on mobile */
+        gap: 30px;
+    }
+    .story-hero {
+        height: 35vh;
+    }
+    .story-text h2 {
+        font-size: 1.8rem;
+    }
+}
